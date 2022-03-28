@@ -121,3 +121,7 @@ def skewer_string_em(skewer):
     to back, comma separated, and surrounded with square brackets
     """
     return "[" + spot_string_em(skewer.top) + "]"
+
+def skewer_calories(skewer):
+    pass
+

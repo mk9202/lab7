@@ -66,7 +66,12 @@ def spot_has(spot, name):
     :return True if any of the spots hold a Food item that equals the
     name, False otherwise.
     """
-    # TODO
+    while spot is not None:
+        if name == spot:
+            return True
+        else:
+            return False
+
 
 def spot_string_em(spot):
     """
@@ -76,4 +81,16 @@ def spot_string_em(spot):
     :return A string containing the names of each of the Food items from
     this spot down.
     """
-    # TODO
+
+    lst = []
+    next = str(spot.next)
+    lst.append(next)
+    while spot is not None:
+        next = spot.next
+        lst.append(str(next))
+        next = spot.next
+    return lst
+
+
+
+

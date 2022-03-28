@@ -1,3 +1,6 @@
-create 5
-add beef
-add chicken
+def vegan(skewer):
+    while spot is not None:
+        if KebabSpot.item.veggie == False
+            print("This skewer contains meat")
+        else:
+            print("This skewer is vegan friendly")

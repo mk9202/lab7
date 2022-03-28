@@ -37,6 +37,7 @@ def kebab_usage():
     """
     print("Kebab commands:")
     print("add item - adds an item to the skewer")
+    print("calories - display the total number of calories of all items on the skewer")
     print("create N - creates a skewer to hold N items")
     print("destroy - destroys the current skewer")
     print("display - displays all the items on the skewer, in order")
@@ -46,6 +47,7 @@ def kebab_usage():
     print("has item - is an item on the skewer?")
     print("quit - exit the program")
     print("status - the capacity and current number of items on the skewer")
+    print("vegan - states whether the skewer contains all vegetables or not")
 
 def kebab_create_skewer(kebab, args):
     """
@@ -99,7 +101,11 @@ def kebab_add(kebab, args):
         print(name, "successfully added to the skewer.")
     except SkewerException as e:
         print(e)
-        
+
+
+def kebab_calories(kebab, args):
+    pass
+
 def kebab_eat(kebab, args):
     """
     Eat the front item on the skewer.
@@ -196,9 +202,14 @@ def kebab_quit(kebab, args):
     print("Goodbye!")
     sys.exit(0)
 
+def kebab_vegan(kebab, args):
+    pass
+
+
 # Each valid command is stored in a dictionary as string by key.
 # The corresponding method to call is stored as the value.
 CMDS = {"add": kebab_add,
+        "calories" : kebab_calories,
         "create": kebab_create_skewer,
         "destroy": kebab_destroy,
         "eat": kebab_eat,
@@ -207,7 +218,8 @@ CMDS = {"add": kebab_add,
         "status": kebab_status,
         "front": kebab_front,
         "display": kebab_display,
-        "quit": kebab_quit}
+        "quit": kebab_quit,
+        "vegan": kebab_vegan}
 
 def kebab_main_loop(kebab):
     """

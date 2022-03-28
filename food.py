@@ -7,9 +7,9 @@ author: << Maya Kaul >>
 from dataclasses import dataclass
 
 # The set of valid food items
-FOODS = {'beef', 'pork', 'chicken', 'onion', 'pepper', 'tomato'} # TOUPDATE
+FOODS = {'beef', 'pork', 'chicken', 'onion', 'pepper', 'tomato', 'mushroom'}
 # The set of vegetables
-VEGGIES = {'onion', "pepper", 'tomato'}   # TOUPDATE
+VEGGIES = {'onion', "pepper", 'tomato', 'mushroom'}
 
 # The calories for each food item (a dictionary, where 
 # key = food name (string) and value = calories (int)
@@ -19,7 +19,8 @@ CALORIES = {
     'pork': 100,
     'onion': 30,
     'pepper': 25,
-    'tomato': 10
+    'tomato': 10,
+    'mushroom': 7,
 }
 
 

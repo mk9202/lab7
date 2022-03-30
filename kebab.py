@@ -9,6 +9,7 @@ author: << Maya Kaul >>
 
 import sys
 from food import FOODS, food_create
+from kebab_spot import calories, vegan
 from skewer import skewer_create, skewer_close, skewer_add, skewer_front, \
     skewer_remove, skewer_has, skewer_size, skewer_capacity, skewer_string_em
 from skewer_exception import SkewerException
@@ -104,7 +105,12 @@ def kebab_add(kebab, args):
 
 
 def kebab_calories(kebab, args):
-    pass
+    if kebab.skewer is not None:
+        print(calories(kebab))
+
+    else:
+        print("There are 0 calories")
+
 
 def kebab_eat(kebab, args):
     """
@@ -202,8 +208,12 @@ def kebab_quit(kebab, args):
     print("Goodbye!")
     sys.exit(0)
 
-def kebab_vegan(kebab, args):
-    pass
+
+def kebab_vegan(kebab):
+    if kebab.skewer is not None:
+        print(vegan(kebab))
+    else:
+        print("There is nothing on the kebab.")
 
 
 # Each valid command is stored in a dictionary as string by key.

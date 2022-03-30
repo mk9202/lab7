@@ -82,15 +82,37 @@ def spot_string_em(spot):
     this spot down.
     """
 
-    lst = []
-    next = str(spot.next)
-    lst.append(next)
+    lst_str = ""
+    next = spot
     while spot is not None:
+        next = spot.item.name
+        print(spot)
+        lst_str = lst_str + str(next)
+        print(lst_str)
+        spot = spot.next
+        print(spot)
+    if spot is not None:
+        lst_str = lst_str + ", "
+
+    return lst_str
+
+
+def calories(spot):
+    spot = spot.skewer.top
+    next = spot
+    sum = 0
+    while spot is not None:
+        next = spot.item.calories
+        sum += next
         next = spot.next
-        lst.append(str(next))
-        next = spot.next
-    return lst
+    return sum
 
 
-
-
+def vegan(spot):
+    spot = spot.skewer.top
+    next = spot
+    while spot is not None:
+        next = spot.item.veggie
+        if spot is True:
+            spot = spot.next
+        return next

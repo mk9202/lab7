@@ -4,7 +4,7 @@ oriented class with a constructor and methods, utilizing the 'self' concept
 for the instance name.
 
 author: RITCS
-author: << YOUR NAME HERE >>
+author: << Maya Kaul >>
 """
 from graphics import GraphWin, Line, Point, Circle, Rectangle
 

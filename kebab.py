@@ -210,6 +210,13 @@ def kebab_quit(kebab, args):
 
 
 def kebab_vegan(kebab):
+    """
+     :Description: This functions prints a statement for when the vegan returns true or false
+     :Precondition: the kebab is the stack
+     :Postcondition: it prints a statement
+     :param: the kebab is a stack
+     """
+
     if kebab.skewer is not None:
         print(vegan(kebab))
     else:

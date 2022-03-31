@@ -7,7 +7,8 @@ author: << Maya Kaul >>
 from dataclasses import dataclass
 
 # The set of valid food items
-FOODS = {'beef', 'pork', 'chicken', 'onion', 'pepper', 'tomato', 'mushroom'}
+FOODS = {'beef', 'por'
+                 'k', 'chicken', 'onion', 'pepper', 'tomato', 'mushroom'}
 # The set of vegetables
 VEGGIES = {'onion', "pepper", 'tomato', 'mushroom'}
 
@@ -25,7 +26,12 @@ CALORIES = {
 
 
 @dataclass(frozen=True)
+
 class Food:
+
+    """
+    Allows the data storage of food names, and whether or not it is a veggie and how many calorie it is
+    """
     name: str
     veggie: bool
     calories: int

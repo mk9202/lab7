@@ -3,7 +3,7 @@ A dataclass that represents "spots" on the skewer and functions that work
 with it.
 
 author: RITCS
-author: << YOUR NAME HERE >>
+author: << Maya Kaul >>
 """
 
 from dataclasses import dataclass
@@ -98,6 +98,13 @@ def spot_string_em(spot):
 
 
 def calories(spot):
+    """
+    :Description: This functions returns the sum of the calories in the kebab
+    :Precondition: the spot needs to be the spot on the kebab
+    :Postcondition: it updates the next spot
+    :param: spot is the dataclass
+    :return: the sum
+    """
     spot = spot.skewer.top
     next = spot
     sum = 0
@@ -109,6 +116,13 @@ def calories(spot):
 
 
 def vegan(spot):
+    """
+     :Description: This functions returns whether the kebab is vegan or not
+     :Precondition: the spot needs to be the spot on the kebab
+     :Postcondition: it updates the next spot
+     :param: spot is the dataclass
+     :return: the next
+     """
     spot = spot.skewer.top
     next = spot
     while spot is not None:
